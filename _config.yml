@@ -20,11 +20,10 @@
 
 title: Andrew Ginn, etc.
 email: andrew.c.ginn@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-I'm Andrew. Looking for threads to connect. Writing about things like that. 
+description: "I'm Andrew. Looking for threads to connect. Writing about things like that."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: @pizzamiheart
+twitter_username: pizzamiheart
 
 # Build settings
 theme: minima

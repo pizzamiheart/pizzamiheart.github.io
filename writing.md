@@ -1,9 +1,8 @@
 ---
 layout: page
 title: Writing
-permalink: /Writing/
+permalink: /writing/
 ---
 
-# Writing
-
 This is where I share long form thoughts, beliefs, and observations about the world.
+

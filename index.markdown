@@ -2,8 +2,6 @@
 layout: page
 ---
 
-# Welcome, there
-
 I'm an interested person looking to openly live and enjoy my life. My website contains various aspects of me:
 
 - my writing

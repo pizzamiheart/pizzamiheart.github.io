@@ -1,10 +1,7 @@
 ---
 layout: page
-title: Now
 permalink: /now/
 ---
-
-# Now
 
 Right now, I am living in Black Mountain, North Carolina where I have lived the last 7 years.
 

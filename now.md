@@ -11,11 +11,11 @@ We just became deacons at our church, Black Mountain Presbyterian, which we're g
 
 #### Professionally/Work
 
-For work, I have been freelancing since February 2023 after leaving a remote job I didn't like very much.
+- For work, I have been freelancing since February 2023 after leaving a remote job I didn't like very much.
 
 #### Projects/Business
 
-At the beginning of August, 2023, my friend Will Alexandar and I started a business called Brain Trust [braintrust.life](https://www.braintrust.life/) and I'm having a blast and learning a ton in new territory. We're about to seek funding to take it full time and launch.
+- At the beginning of August, 2023, my friend Will Alexandar and I started a business called Brain Trust [braintrust.life](https://www.braintrust.life/) and I'm having a blast and learning a ton in new territory. We're about to seek funding to take it full time and launch.
 
 #### What I'm Up to
 
@@ -28,7 +28,7 @@ I'm "reading" several books:
 
 #### What I'm Noticing
 
-Something I'm noticing is how important it is to just be present in my life and enjoy the day...
+- Something I'm noticing is how important it is to just be present in my life and enjoy the day...
 
 Concept & inspiration from Derek Sivers: [sive.rs/now](https://sive.rs/now)
 

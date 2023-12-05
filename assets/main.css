@@ -140,8 +140,8 @@ pre > code {
  */
  .container {
   max-width: 600px; /* Narrower width */
-  margin: 0; /* Remove automatic margins */
-  padding: 0 20px; /* Add some padding on the sides */
+  margin: 100px; /* Remove automatic margins */
+  padding: 20px; /* Add some padding on the sides */
 }
 
 /* Adjust padding for small devices */

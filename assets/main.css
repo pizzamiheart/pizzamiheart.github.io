@@ -136,9 +136,9 @@ pre > code {
 }
 
 /**
- * Wrapper - narrower margins
+ * Container - narrower margins
  */
- .wrapper {
+ .container {
   max-width: 600px; /* Narrower width */
   margin: 0; /* Remove automatic margins */
   padding: 0 20px; /* Add some padding on the sides */

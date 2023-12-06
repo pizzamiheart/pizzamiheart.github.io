@@ -15,7 +15,7 @@ We just became deacons at our church, Black Mountain Presbyterian, which we're g
 
 #### Projects/Business
 
-- At the beginning of August, 2023, my friend Will Alexandar and I started a business called Brain Trust [braintrust.life](https://www.braintrust.life/) and I'm having a blast and learning a ton in new territory. We're about to seek funding to take it full time and launch.
+- At the beginning of August, 2023, my friend Will Alexander and I started a business called Brain Trust [braintrust.life](https://www.braintrust.life/) and I'm having a blast and learning a ton in new territory. We're about to seek funding to take it full time and launch.
 
 #### What I'm Up to
 

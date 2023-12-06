@@ -25,7 +25,7 @@ h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
 .highlight {
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 /**
@@ -165,7 +165,7 @@ pre > code {
  */
  footer {
   width: 100%; /* Full width */
-  padding: 20px; /* Padding inside the footer */
+  padding: 0px; /* Padding inside the footer */
 }
 
 /* Other responsive design adjustments... */

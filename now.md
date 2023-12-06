@@ -20,7 +20,7 @@ We just became deacons at our church, Black Mountain Presbyterian, which we're g
 #### What I'm Up to
 
 I'm "reading" several books: 
-- Hitchhiker's Guide to the Galaxy - Douglas Adams, 69% complete<
+- Hitchhiker's Guide to the Galaxy - Douglas Adams, 69% complete
 - Hackers and Painters - Paul Graham, 38% complete
 - Meditiations - Marcus Aurelius, 17% complete
 - Moby Dick: or, the White Wale - Herman Melville, 4% complete
@@ -28,7 +28,9 @@ I'm "reading" several books:
 
 #### What I'm Noticing
 
-- Something I'm noticing is how important it is to just be present in my life and enjoy the day...
+- Be present
+- Enjoy being
+- Write and think to form ideas
 
 Concept & inspiration from Derek Sivers: [sive.rs/now](https://sive.rs/now)
 

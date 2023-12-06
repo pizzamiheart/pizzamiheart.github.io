@@ -14,6 +14,7 @@
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  margin: 0; /* Reset the default margin */
 }
 
 /**
@@ -31,6 +32,7 @@ ul, ol, dl, figure,
  */
 main {
   display: block;
+  flex: 1; /* Make the content expand */
 }
 
 /**
@@ -138,20 +140,28 @@ pre > code {
 /**
  * Container - narrower margins
  */
- .container {
+.container {
   max-width: 600px; /* Narrower width */
-  margin: 100px; /* Remove automatic margins */
+  margin: 100px; /* Adjusted margins */
   padding: 20px; /* Add some padding on the sides */
 }
 
 /* Adjust padding for small devices */
 @media screen and (max-width: 800px) {
-  .wrapper {
+  .container {
     padding-right: 15px;
     padding-left: 15px;
   }
 }
 
+/**
+ * Site footer
+ */
+.site-footer {
+  padding-top: 0; /* Remove extra padding */
+  margin-top: 0; /* Remove extra margin */
+  padding-bottom: 0; /* Remove extra padding at the bottom if needed */
+}
 
 /* Other responsive design adjustments... */
 

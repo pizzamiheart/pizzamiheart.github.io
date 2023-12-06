@@ -38,7 +38,7 @@ ul, ol, dl, figure,
   width: 100%; /* Full width */
   align-items: center; /* Centers content horizontally */
   justify-content: flex-start; /* Aligns content to the top */
-  padding: 20px; /* Padding inside the main element */
+  padding: 0px; /* Padding inside the main element */
 }
 
 /**
@@ -166,6 +166,7 @@ pre > code {
  footer {
   width: 100%; /* Full width */
   padding: 0px; /* Padding inside the footer */
+  border-radius: 0px;
 }
 
 /* Other responsive design adjustments... */

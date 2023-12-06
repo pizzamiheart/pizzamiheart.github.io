@@ -2,9 +2,9 @@
  * Basic styling
  */
  body {
-  font-family: 'Comfortaa', cursive; /* Updated font */
+  font-family: 'Comfortaa', cursive;
   color: #111;
-  background-color: #fbfcf8; /* Ivory background */
+  background-color: #fbfcf8;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: 'kern' 1;
   -moz-font-feature-settings: 'kern' 1;
@@ -12,9 +12,10 @@
   font-feature-settings: 'kern' 1;
   font-kerning: normal;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
-  margin: 0; /* Reset the default margin */
+  min-height: 100vh; /* Full viewport height */
+  margin: 0; /* Reset default margin */
+  padding: 0; /* Reset default padding */
 }
 
 /**
@@ -30,9 +31,14 @@ ul, ol, dl, figure,
 /**
  * `main` element
  */
-main {
-  display: block;
-  flex: 1; /* Make the content expand */
+ main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Expands to fill available space */
+  width: 100%; /* Full width */
+  align-items: center; /* Centers content horizontally */
+  justify-content: flex-start; /* Aligns content to the top */
+  padding: 20px; /* Padding inside the main element */
 }
 
 /**
@@ -155,12 +161,11 @@ pre > code {
 }
 
 /**
- * Site footer
+ * Footer
  */
-.site-footer {
-  padding-top: 0; /* Remove extra padding */
-  margin-top: 0; /* Remove extra margin */
-  padding-bottom: 0; /* Remove extra padding at the bottom if needed */
+ footer {
+  width: 100%; /* Full width */
+  padding: 20px; /* Padding inside the footer */
 }
 
 /* Other responsive design adjustments... */

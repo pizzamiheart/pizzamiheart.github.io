@@ -8,72 +8,72 @@
 </head>
 <body>
     <header>
-      <h1>Andrew Ginn, etc.</h1>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/now/">Now</a></li>
-        </ul>
-      </nav>
-      <div class="social-media">
-        <a href="https://twitter.com/pizzamiheart" target="_blank"><img src="assets/twitter.png" alt="Twitter"></a>
-        <a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
-        <a href="https://deep-loafe.beehiiv.com/" target="_blank"><img src="assets/beehiiv.png" alt="Beehiiv"></a>
-        <a href="mailto:andrew.c.ginn@gmail.com"><img src="assets/mail.svg" alt="Email"></a>
-      </div>
+        <h1 class="title">Andrew Ginn, etc.</h1>
+        <nav>
+            <ul class="no-bullets">
+                <li><a href="/" class="mute">Home</a></li>
+                <li><a href="/now/" class="mute">Now</a></li>
+            </ul>
+        </nav>
+        <div class="social-media icons"> <!-- Added "icons" class for icon alignment -->
+            <a href="https://twitter.com/pizzamiheart" target="_blank" class="icon"><img src="assets/twitter.png" alt="Twitter"></a>
+            <a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank" class="icon"><img src="assets/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://deep-loafe.beehiiv.com/" target="_blank" class="icon"><img src="assets/beehiiv.png" alt="Beehiiv"></a>
+            <a href="mailto:andrew.c.ginn@gmail.com" class="icon"><img src="assets/mail.svg" alt="Email"></a>
+        </div>
     </header>
     <main>
-      <section>
-        <h2>About Me</h2>
-        <p>Writer. Dad. Husband. Ultrarunner. Hope and optimism. Christian.</p>
-        <p>I believe in technology. Am hopeful about the present and future impact of it.</p>
-        <p>That informs a decent amount of my thinking right now and surely influences my writing</p>
-        <p>I enjoy tinkering with things and being creative.</p>
-        <p>Believer in the English Premier League</p>
-      </section>
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li><a href="https://www.braintrust.life/">Brain Trust</a> - Building an app with friends that allows you to build a corpus of yourself and use AI to interact wtih that. Can also be given to someone else for them to use AI to chat with.</li>
-          <li><a href=https://chat.openai.com/g/g-nyqGBSlbi-whitman>Whitman</a> - Interpret/translate the Bible through Walt Whitman's tone and writing.</li>
-          <!-- Add more projects as needed -->
-        </ul>
-      </section>
-      <section>
-        <h2>Writing</h2>
-        <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
-        <!-- Container for blog posts -->
-        <div id="blog-posts"></div>
-      </section>
-      
-      <!-- Add your JavaScript at the end of the body -->
-      <script>
-        // JavaScript code to fetch and display blog posts
-        const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
-        const blogContainer = document.getElementById('blog-posts');
-      
-        fetch(feedUrl)
-          .then(response => response.json())
-          .then(data => {
-            const posts = data.items; // The actual path may vary depending on the feed structure
-            let htmlContent = '';
-      
-            posts.forEach(post => {
-              htmlContent += `
-                <article>
-                  <h2><a href="${post.link}">${post.title}</a></h2>
-                  <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
-                </article>
-              `;
-            });
-      
-            blogContainer.innerHTML = htmlContent;
-          })
-          .catch(error => console.error('Error loading feed:', error));
-      </script>      
+        <section>
+            <h2 class="title">About Me</h2>
+            <p>Writer. Dad. Husband. Ultrarunner. Hope and optimism. Christian.</p>
+            <p>I believe in technology. Am hopeful about the present and future impact of it.</p>
+            <p>That informs a decent amount of my thinking right now and surely influences my writing</p>
+            <p>I enjoy tinkering with things and being creative.</p>
+            <p>Believer in the English Premier League</p>
+        </section>
+        <section>
+            <h2 class="title">Projects</h2>
+            <ul class="no-bullets">
+                <li><a href="https://www.braintrust.life/" class="mute">Brain Trust</a> - Building an app with friends that allows you to build a corpus of yourself and use AI to interact wtih that. Can also be given to someone else for them to use AI to chat with.</li>
+                <li><a href="https://chat.openai.com/g/g-nyqGBSlbi-whitman" class="mute">Whitman</a> - Interpret/translate the Bible through Walt Whitman's tone and writing.</li>
+                <!-- Add more projects as needed -->
+            </ul>
+        </section>
+        <section>
+            <h2 class="title">Writing</h2>
+            <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
+            <!-- Container for blog posts -->
+            <div id="blog-posts"></div>
+        </section>
+        
+        <!-- Add your JavaScript at the end of the body -->
+        <script>
+            // JavaScript code to fetch and display blog posts
+            const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
+            const blogContainer = document.getElementById('blog-posts');
+        
+            fetch(feedUrl)
+            .then(response => response.json())
+            .then(data => {
+                const posts = data.items; // The actual path may vary depending on the feed structure
+                let htmlContent = '';
+        
+                posts.forEach(post => {
+                    htmlContent += `
+                        <article>
+                            <h2><a href="${post.link}">${post.title}</a></h2>
+                            <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
+                        </article>
+                    `;
+                });
+        
+                blogContainer.innerHTML = htmlContent;
+            })
+            .catch(error => console.error('Error loading feed:', error));
+        </script>      
     </main>
     <footer>
-      <p>&copy; 2023 Andrew Ginn, etc. All rights reserved.</p>
+        <p>&copy; 2023 Andrew Ginn, etc. All rights reserved.</p>
     </footer>
 </body>
 </html>

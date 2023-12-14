@@ -1,23 +1,23 @@
 body {
-  background-color: ##fbfcf8; 
-  color: #111; 
+  background-color: #fbfcf8; 
+  color: #3A3B3C; /* Adjusted to a blue-ish tone */
   max-width: 600px;
   margin: 5% auto;
-  font-family: font-family: 'Comfortaa', cursive;
+  font-family: 'Comfortaa', cursive; /* If you want the same font as Logan's, replace 'Comfortaa' with the font stack he used */
   padding: 2em;
   font-weight: 300;
 }
 
 a {
-  color: #111;
+  color: #3A3B3C; /* Adjusted to a blue-ish tone */
   text-decoration: none;
 }
 
-a:hover .title {
-  color: #111;
+a:hover .title, a:focus .title {
+  color: #579feb;
 }
 
-a:hover {
+a:hover, a:focus {
   color: #579feb;
 }
 
@@ -29,24 +29,21 @@ h2 {
   padding: 5px 0 5px 0;
 }
 
-.icon {
-  margin-right: 5px;
-  color: #111;
-}
-
+/* Icon styles for alignment in a row similar to Logan's website */
 .icons {
+  display: flex; /* Align icons in a row */
+  align-items: center; /* Center icons vertically */
+  gap: 10px; /* Spacing between icons */
   margin-top: 5px; 
   padding-bottom: 10px;
 }
 
-.section {
-  font-weight: 1;
-  margin-top: 5%;
-  margin-bottom: 3%;
+.icon {
+  color: #3A3B3C; /* Adjusted to a blue-ish tone */
 }
 
 li::marker {
-  color:#111;
+  color: #3A3B3C; /* Adjusted to a blue-ish tone */
 }
 
 .mute {
@@ -66,7 +63,7 @@ button {
   padding: .75rem;
   background-color: #fbfcf8;
   font-size: 18px;
-  color: #111;
+  color: #3A3B3C; /* Adjusted to a blue-ish tone */
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -82,4 +79,9 @@ button {
 
 iframe {
   overflow: hidden;
+}
+
+/* Additional styles for icon hover effects, if desired */
+.icon:hover, .icon:focus {
+  color: #579feb; /* Change color on hover/focus */
 }

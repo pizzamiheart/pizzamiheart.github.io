@@ -1,6 +1,6 @@
 body {
   background-color: #fbfcf8; 
-  color: #3A3B3C; /* Adjusted to a blue-ish tone */
+  color: #2664a1; /* Adjusted to a blue-ish tone */
   max-width: 600px;
   margin: 5% auto;
   font-family: 'Comfortaa', cursive; /* If you want the same font as Logan's, replace 'Comfortaa' with the font stack he used */
@@ -9,16 +9,16 @@ body {
 }
 
 a {
-  color: #3A3B3C; /* Adjusted to a blue-ish tone */
+  color: #2664a1; /* Adjusted to a blue-ish tone */
   text-decoration: none;
 }
 
 a:hover .title, a:focus .title {
-  color: #579feb;
+  color: #d6c438;
 }
 
 a:hover, a:focus {
-  color: #579feb;
+  color: #d6c438;
 }
 
 h2 {
@@ -41,11 +41,11 @@ h2 {
 }
 
 .icon {
-  color: #3A3B3C; /* Adjusted to a blue-ish tone */
+  color: #2664a1; /* Adjusted to a blue-ish tone */
 }
 
 li::marker {
-  color: #3A3B3C; /* Adjusted to a blue-ish tone */
+  color: #2664a1; /* Adjusted to a blue-ish tone */
 }
 
 .mute {
@@ -65,18 +65,12 @@ button {
   padding: .75rem;
   background-color: #fbfcf8;
   font-size: 18px;
-  color: #3A3B3C; /* Adjusted to a blue-ish tone */
+  color: #2664a1; /* Adjusted to a blue-ish tone */
   border: none;
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
   text-align: left;
-}
-
-.no-bullets {
-  list-style-type: none; 
-  padding: 0; 
-  margin: 0; 
 }
 
 iframe {
@@ -85,5 +79,5 @@ iframe {
 
 /* Additional styles for icon hover effects, if desired */
 .icon:hover, .icon:focus {
-  color: #579feb; /* Change color on hover/focus */
+  color: #d6c438; /* Change color on hover/focus */
 }

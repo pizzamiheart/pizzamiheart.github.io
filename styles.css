@@ -1,15 +1,16 @@
 body {
   background-color: #fbfcf8; 
-  color: #2664a1; /* Adjusted to a blue-ish tone */
+  color: #000000; 
   max-width: 600px;
   margin: 5% auto;
-  font-family: 'Comfortaa', cursive; /* If you want the same font as Logan's, replace 'Comfortaa' with the font stack he used */
+  font-family: 'Comfortaa', cursive;
   padding: 2em;
   font-weight: 300;
+  line-height: 1.6; /* Adjust line spacing for readability */
 }
 
 a {
-  color: #2664a1; /* Adjusted to a blue-ish tone */
+  color: #000000; 
   text-decoration: none;
 }
 
@@ -21,31 +22,44 @@ a:hover, a:focus {
   color: #d6c438;
 }
 
-h2 {
-  margin: 0px;
+h1, h2 {
+  margin-top: 2em; /* Increased top margin */
+  margin-bottom: 0.5em; /* Adjusted bottom margin */
+}
+
+/* Added a more generic class for sections */
+.section {
+  margin-bottom: 2em; /* Increased space between sections */
 }
 
 .element {
-  padding: 5px 0 5px 0;
+  margin: 1em 0; /* Increased space around elements */
 }
 
-/* Icon styles for alignment in a row similar to Logan's website */
+/* Adjusted icon styles */
 .icons {
-  display: flex; /* Align icons in a row */
-  align-items: center; /* Center icons vertically */
-  max-width: 24px;
-  height: auto;
-  gap: 10px; /* Spacing between icons */
-  margin-top: 5px; 
-  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start; /* Align icons to the start */
+  gap: 10px;
+  margin-top: 1em; /* Increased spacing from top */
+  padding-bottom: 1em; /* Increased padding at the bottom */
 }
 
 .icon {
-  color: #2664a1; /* Adjusted to a blue-ish tone */
+  display: block; /* Ensure icons are block-level for spacing */
+  margin-bottom: 1em; /* Increased space between icons */
 }
 
-li::marker {
-  color: #2664a1; /* Adjusted to a blue-ish tone */
+/* List styles */
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0;
+  margin: 1em 0; /* Increased space around lists */
+}
+
+li {
+  margin-bottom: 0.75em; /* Increased space between list items */
 }
 
 .mute {
@@ -56,16 +70,16 @@ li::marker {
 }
 
 .title {
-  margin-bottom: 10px;
   font-weight: 700;
+  margin-bottom: 1em; /* Increased space after titles */
 }
 
 button {
-  margin-bottom: 10px;
+  margin-bottom: 1em; /* Increased space after buttons */
   padding: .75rem;
   background-color: #fbfcf8;
   font-size: 18px;
-  color: #2664a1; /* Adjusted to a blue-ish tone */
+  color: #000000;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -75,9 +89,33 @@ button {
 
 iframe {
   overflow: hidden;
+  margin-bottom: 1em; /* Increased space after iframes */
 }
 
-/* Additional styles for icon hover effects, if desired */
+/* Hover effects for icons */
 .icon:hover, .icon:focus {
-  color: #d6c438; /* Change color on hover/focus */
+  color: #d6c438;
+}
+
+/* Footer styles */
+footer {
+  margin-top: 2em; /* Space before footer */
+  padding: 1em 0; /* Padding inside footer */
+  text-align: center; /* Center-align footer text */
+}
+
+/* Additional global spacing */
+p {
+  margin-bottom: 1em; /* Space after paragraphs */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding: 1em; /* Smaller padding on smaller screens */
+  }
+
+  h1, h2 {
+    margin-top: 1.5em; /* Smaller margin on top for headers */
+  }
 }

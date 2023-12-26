@@ -1,6 +1,6 @@
 body {
-  background-color: #fbfcf8; 
-  color: #000000; 
+  background-color: #e9eddf; 
+  color: #497ef2; 
   max-width: 600px;
   margin: 5% auto;
   font-family: 'Comfortaa', cursive;
@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #000000; 
+  color: #497ef2; 
   text-decoration: none;
 }
 
@@ -77,9 +77,9 @@ li {
 button {
   margin-bottom: 1em; /* Increased space after buttons */
   padding: .75rem;
-  background-color: #fbfcf8;
+  background-color: #e9eddf;
   font-size: 18px;
-  color: #000000;
+  color: #497ef2;
   border: none;
   border-radius: 5px;
   cursor: pointer;

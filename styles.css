@@ -1,6 +1,6 @@
 body {
   background-color: #e9eddf; 
-  color: #0000; 
+  color: #000000; 
   max-width: 600px;
   margin: 5% auto;
   font-family: 'Comfortaa', cursive;
@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #0000; 
+  color: #000000; 
   text-decoration: none;
 }
 

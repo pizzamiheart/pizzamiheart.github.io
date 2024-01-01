@@ -39,39 +39,42 @@
             <!-- Container for blog posts -->
             <div id="blog-posts"></div>
         </section>
-        
-        <!-- Add your JavaScript at the end of the body -->
-        <script>
-            // JavaScript code to fetch and display blog posts
-            function fetchAndUpdateFeed() {
-  fetch(feedUrl)
-    .then(response => response.json())
-    .then(data => {
-      const posts = data.items; // The actual path may vary depending on the feed structure
-      let htmlContent = '';
-
-      posts.forEach(post => {
-        htmlContent += `
-          <article>
-            <h2><a href="${post.link}">${post.title}</a></h2>
-            <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
-          </article>
-        `;
-      });
-
-      blogContainer.innerHTML = htmlContent;
-    })
-    .catch(error => console.error('Error loading feed:', error));
-}
-
-// Fetch and update the feed immediately when the page loads
-fetchAndUpdateFeed();
-
-// Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
-const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
-setInterval(fetchAndUpdateFeed, updateInterval);
-
-        </script>      
+    </main>
+    
+    <!-- Add your JavaScript at the end of the body -->
+    <script>
+        // JavaScript code to fetch and display blog posts
+        const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
+        const blogContainer = document.getElementById('blog-posts');
+    
+        function fetchAndUpdateFeed() {
+            fetch(feedUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const posts = data.items; // The actual path may vary depending on the feed structure
+                    let htmlContent = '';
+    
+                    posts.forEach(post => {
+                        htmlContent += `
+                            <article>
+                                <h2><a href="${post.link}">${post.title}</a></h2>
+                                <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
+                            </article>
+                        `;
+                    });
+    
+                    blogContainer.innerHTML = htmlContent;
+                })
+                .catch(error => console.error('Error loading feed:', error));
+        }
+    
+        // Fetch and update the feed immediately when the page loads
+        fetchAndUpdateFeed();
+    
+        // Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
+        const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
+        setInterval(fetchAndUpdateFeed, updateInterval);
+    </script>       
     </main>
     <footer>
         <p>&copy; 2023 Andrew Ginn, etc. All rights reserved.</p>

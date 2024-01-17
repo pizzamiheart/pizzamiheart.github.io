@@ -72,7 +72,7 @@ ul.no-bullets {
   margin-left: auto;
   margin-right: auto;
   display: block;
-  animation: wave 2s infinite; /* Slowing down the speed */
+  animation: wave 8s infinite; /* Slowing down the speed */
 }
 
 

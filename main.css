@@ -60,19 +60,20 @@ ul.no-bullets {
 
 /* animation for vibrating divider line */
 @keyframes wave {
-  0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(-5px); }
-  50% { transform: translateY(5px); }
-  75% { transform: translateY(-5px); }
+  0%, 100% { transform: translateX(0) skewY(0deg); }
+  25% { transform: translateX(-5px) skewY(-5deg); }
+  50% { transform: translateX(10px) skewY(0deg); }
+  75% { transform: translateX(-5px) skewY(5deg); }
 }
 
-.vibrating-line {
+.wave-line {
   width: 50%;
-  border: 1px solid black;
+  height: 2px; /* You can set the thickness of your line here */
+  background: black;
   margin-left: auto;
   margin-right: auto;
   display: block;
-  animation: wave 8s infinite; /* Slowing down the speed */
+  animation: wave 2s infinite linear;
 }
 
 

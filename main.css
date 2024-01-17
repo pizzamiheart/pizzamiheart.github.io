@@ -60,11 +60,9 @@ ul.no-bullets {
 
 /* animation for vibrating divider line */
 @keyframes vibrate {
-  0% { transform: translateX(0px); }
-  25% { transform: translateX(-2px); }
-  50% { transform: translateX(2px); }
-  75% { transform: translateX(-2px); }
-  100% { transform: translateX(0px); }
+  0%, 100% { transform: translateX(0); }
+  25%, 75% { transform: translateX(-3px); }
+  50% { transform: translateX(3px); }
 }
 
 .vibrating-line {
@@ -72,8 +70,10 @@ ul.no-bullets {
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  animation: vibrate 0.2s infinite;
+  display: block; /* Ensure it's treated as a block-level element */
+  animation: vibrate 0.3s infinite;
 }
+
 
 li {
   margin-bottom: 0.75em; /* Increased space between list items */

@@ -59,10 +59,11 @@ ul.no-bullets {
 }
 
 /* animation for vibrating divider line */
-@keyframes vibrate {
-  0%, 100% { transform: translateX(0); }
-  25%, 75% { transform: translateX(-3px); }
-  50% { transform: translateX(3px); }
+@keyframes wave {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
 }
 
 .vibrating-line {
@@ -70,8 +71,8 @@ ul.no-bullets {
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  display: block; /* Ensure it's treated as a block-level element */
-  animation: vibrate 0.3s infinite;
+  display: block;
+  animation: wave 2s infinite; /* Slowing down the speed */
 }
 
 

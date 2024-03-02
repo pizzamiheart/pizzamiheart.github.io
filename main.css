@@ -1,6 +1,6 @@
 body {
-  background-color: #e1e1e1; 
-  color: #000000; 
+  background-color: #e1e1e1;
+  color: #000000;
   max-width: 600px;
   margin: 5% auto;
   font-family: 'Comfortaa', cursive;
@@ -10,7 +10,7 @@ body {
 }
 
 a {
-  color: #000000; 
+  color: #000000;
   text-decoration: none;
 }
 
@@ -58,7 +58,7 @@ ul.no-bullets {
   margin: 1em 0; /* Increased space around lists */
 }
 
-/* animation for vibrating divider line */
+/* Animation for vibrating divider line */
 @keyframes vibrate {
   0%, 100% { transform: translateX(0); }
   25%, 75% { transform: translateX(-3px); }
@@ -73,9 +73,6 @@ ul.no-bullets {
   display: block; /* Ensure it's treated as a block-level element */
   animation: vibrate 3s infinite;
 }
-
-
-
 
 li {
   margin-bottom: 0.75em; /* Increased space between list items */
@@ -139,6 +136,7 @@ p {
   }
 }
 
+/* Portal page styles */
 .portal {
   display: flex;
   justify-content: center;
@@ -164,18 +162,18 @@ p {
 }
 
 @keyframes rotateDot {
-  0% {
-      transform: translate(-50%, -50%) rotate(0deg);
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
   }
-  100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
 #enterBtn {
   padding: 10px 20px;
   position: absolute;
-  top: 50%;
+  top: 52%; /* slightly lower than the red dot for visual effect */
   left: 50%;
   transform: translate(-50%, -50%) scale(0); /* Starts out scaled down */
   background-color: #ffd700; /* Gold color */
@@ -189,16 +187,14 @@ p {
 .red-dot:hover + #enterBtn, #enterBtn:hover {
   transform: translate(-50%, -50%) scale(1); /* Scales up to full size on hover */
   z-index: 1; /* Bring to the front on hover */
+  display: block; /* This line is added to override the .hidden class */
 }
 
 .hidden {
   display: none; /* Hide the button initially */
 }
 
-.red-dot:hover ~ .hidden, .hidden:hover {
-  display: block; /* Show the button when the red dot is hovered */
-}
-
+/* Override body styles for the portal page */
 .portal body {
   max-width: none;
   margin: 0;

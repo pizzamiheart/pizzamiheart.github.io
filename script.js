@@ -5,15 +5,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // When the red dot is hovered over, show the Enter button
     redDot.addEventListener('mouseover', function() {
       enterBtn.style.opacity = '1';
-      enterBtn.style.transform = 'scale(1)';
+      enterBtn.style.transform = 'translate(-50%, -50%) scale(1)';
       enterBtn.style.display = 'block';
-    });
-  
-    // When the red dot is no longer hovered over, hide the Enter button
-    redDot.addEventListener('mouseout', function() {
-      enterBtn.style.opacity = '0';
-      enterBtn.style.transform = 'scale(0)';
-      enterBtn.style.display = 'none';
+      redDot.style.display = 'none'; // Hide the red dot
     });
   
     // When the Enter button is clicked, redirect to the main content page

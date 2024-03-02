@@ -128,7 +128,7 @@ p {
   }
 }
 
-/* Portal page styles */
+/* Fullscreen portal styles */
 .portal {
   display: flex;
   justify-content: center;
@@ -143,6 +143,7 @@ p {
   z-index: 10;
 }
 
+/* Red dot styles */
 .red-dot {
   width: 20px;
   height: 20px;
@@ -151,11 +152,12 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%);
   cursor: pointer;
   animation: pulse 2s infinite alternate ease-in-out;
 }
 
+/* Pulsing animation for the red dot */
 @keyframes pulse {
   0% {
     transform: translate(-50%, -50%) scale(1);
@@ -165,28 +167,37 @@ p {
   }
 }
 
+/* Enter button styles */
 #enterBtn {
   padding: 10px 20px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  background-color: transparent;
+  background-color: transparent; /* Make the button transparent */
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #fff; /* White border */
   border-radius: 5px;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
+  opacity: 0; /* Start as invisible */
   z-index: 11;
-  display: none;
+  display: none; /* Start as not displayed */
 }
 
+/* Show the Enter button when red dot is hovered */
 .red-dot:hover + #enterBtn {
-  display: block;
-  opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
+  display: block; /* Show the button */
+  opacity: 1; /* Make the button fully visible */
+  transform: translate(-50%, -50%) scale(1); /* Scale up the button */
 }
 
+/* Hide the red dot when hovered */
 .red-dot:hover {
   opacity: 0;
+  animation: none;
+}
+
+/* Make the red dot non-interactive after hover */
+.red-dot:hover {
+  pointer-events: none;
 }

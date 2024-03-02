@@ -6,7 +6,7 @@ body {
   font-family: 'Comfortaa', cursive;
   padding: 2em;
   font-weight: 300;
-  line-height: 1.6; /* Adjust line spacing for readability */
+  line-height: 1.6;
 }
 
 a {
@@ -23,42 +23,38 @@ a:hover, a:focus {
 }
 
 h1, h2 {
-  margin-top: 2em; /* Increased top margin */
-  margin-bottom: 0.5em; /* Adjusted bottom margin */
+  margin-top: 2em;
+  margin-bottom: 0.5em;
 }
 
-/* Added a more generic class for sections */
 .section {
-  margin-bottom: 2em; /* Increased space between sections */
+  margin-bottom: 2em;
 }
 
 .element {
-  margin: 1em 0; /* Increased space around elements */
+  margin: 1em 0;
 }
 
-/* Adjusted icon styles */
 .icons {
   display: flex;
   align-items: center;
-  justify-content: start; /* Align icons to the start */
+  justify-content: start;
   gap: 10px;
-  margin-top: 1em; /* Increased spacing from top */
-  padding-bottom: 1em; /* Increased padding at the bottom */
+  margin-top: 1em;
+  padding-bottom: 1em;
 }
 
 .icon {
-  display: block; /* Ensure icons are block-level for spacing */
-  margin-bottom: 1em; /* Increased space between icons */
+  display: block;
+  margin-bottom: 1em;
 }
 
-/* List styles */
 ul.no-bullets {
-  list-style-type: none; /* Remove bullets */
+  list-style-type: none;
   padding: 0;
-  margin: 1em 0; /* Increased space around lists */
+  margin: 1em 0;
 }
 
-/* Animation for vibrating divider line */
 @keyframes vibrate {
   0%, 100% { transform: translateX(0); }
   25%, 75% { transform: translateX(-3px); }
@@ -70,12 +66,12 @@ ul.no-bullets {
   border: 1px solid black;
   margin-left: auto;
   margin-right: auto;
-  display: block; /* Ensure it's treated as a block-level element */
+  display: block;
   animation: vibrate 3s infinite;
 }
 
 li {
-  margin-bottom: 0.75em; /* Increased space between list items */
+  margin-bottom: 0.75em;
 }
 
 .mute {
@@ -87,11 +83,11 @@ li {
 
 .title {
   font-weight: 700;
-  margin-bottom: 1em; /* Increased space after titles */
+  margin-bottom: 1em;
 }
 
 button {
-  margin-bottom: 1em; /* Increased space after buttons */
+  margin-bottom: 1em;
   padding: .75rem;
   background-color: #e1e1e1;
   font-size: 18px;
@@ -105,98 +101,93 @@ button {
 
 iframe {
   overflow: hidden;
-  margin-bottom: 1em; /* Increased space after iframes */
+  margin-bottom: 1em;
 }
 
-/* Hover effects for icons */
 .icon:hover, .icon:focus {
   color: #2976d3;
 }
 
-/* Footer styles */
 footer {
-  margin-top: 2em; /* Space before footer */
-  padding: 1em 0; /* Padding inside footer */
-  text-align: center; /* Center-align footer text */
+  margin-top: 2em;
+  padding: 1em 0;
+  text-align: center;
 }
 
-/* Additional global spacing */
 p {
-  margin-bottom: 1em; /* Space after paragraphs */
+  margin-bottom: 1em;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   body {
-    padding: 1em; /* Smaller padding on smaller screens */
+    padding: 1em;
   }
 
   h1, h2 {
-    margin-top: 1.5em; /* Smaller margin on top for headers */
+    margin-top: 1.5em;
   }
 }
 
-/* Portal page styles */
+/* Fullscreen portal styles */
 .portal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed position to cover the entire screen */
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    overflow: hidden;
+    top: 0; /* Position at the top left of the viewport */
+    left: 0;
+    z-index: 10; /* High z-index to ensure it's above other content */
 }
 
+/* Red dot styles */
 .red-dot {
-  width: 20px;
-  height: 20px;
-  background-color: red;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  animation: rotateDot 2s linear infinite; /* Apply the rotation animation */
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* Circular rotation around the center */
+    animation: rotateDot 2s linear infinite;
 }
 
-@keyframes rotateDot {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-
+/* Enter button styles */
 #enterBtn {
-  padding: 10px 20px;
-  position: absolute;
-  top: 52%; /* slightly lower than the red dot for visual effect */
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0); /* Starts out scaled down */
-  background-color: #ffd700; /* Gold color */
-  color: #000;
-  border: none;
-  border-radius: 5px;
-  transition: transform 0.5s ease; /* Smooth transition for scaling up */
-  z-index: -1; /* Start behind the red dot */
+    padding: 10px 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20px) scale(0); /* Adjust translate to position correctly */
+    background-color: #333; /* A less bright color for the button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    opacity: 0; /* Start as invisible */
+    z-index: 11; /* Above the red dot to ensure it's clickable */
 }
 
-.red-dot:hover + #enterBtn, #enterBtn:hover {
-  transform: translate(-50%, -50%) scale(1); /* Scales up to full size on hover */
-  z-index: 1; /* Bring to the front on hover */
-  display: block; /* This line is added to override the .hidden class */
+/* Hover effects for red dot and Enter button */
+.red-dot:hover + #enterBtn {
+    opacity: 1; /* Fade in the Enter button */
+    transform: translate(-50%, -20px) scale(1); /* Scale up the Enter button */
+}
+
+/* Rotate the red dot around a small circle */
+@keyframes rotateDot {
+    0% {
+        transform: translate(-50%, -50%) translate(10px, 0) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) translate(10px, 0) rotate(360deg);
+    }
 }
 
 .hidden {
-  display: none; /* Hide the button initially */
-}
-
-/* Override body styles for the portal page */
-.portal body {
-  max-width: none;
-  margin: 0;
-  padding: 0;
+    display: none;
 }

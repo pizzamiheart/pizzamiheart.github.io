@@ -1,24 +1,24 @@
-// This function is called when the red dot is hovered over
-function showEnterButton() {
+document.addEventListener('DOMContentLoaded', (event) => {
+    var redDot = document.getElementById('redDot');
     var enterBtn = document.getElementById('enterBtn');
-    enterBtn.classList.remove('hidden'); // Remove the 'hidden' class to show the button
-    enterBtn.style.transform = 'scale(1)'; // Scale the button to its normal size
-}
-
-// This function is called when the mouse stops hovering over the red dot
-function hideEnterButton() {
-    var enterBtn = document.getElementById('enterBtn');
-    enterBtn.classList.add('hidden'); // Add the 'hidden' class to hide the button
-    enterBtn.style.transform = 'scale(0)'; // Scale down the button to hide it
-}
-
-// Add the event listeners to the red dot
-var redDot = document.getElementById('redDot');
-redDot.addEventListener('mouseover', showEnterButton);
-redDot.addEventListener('mouseout', hideEnterButton);
-
-// Add the click event listener to the "Enter" button
-var enterBtn = document.getElementById('enterBtn');
-enterBtn.addEventListener('click', function() {
-    window.location.href = 'main.html'; // Redirect to the main content page
-});
+  
+    // When the red dot is hovered over, show the Enter button
+    redDot.addEventListener('mouseover', function() {
+      enterBtn.style.opacity = '1';
+      enterBtn.style.transform = 'scale(1)';
+      enterBtn.style.display = 'block';
+    });
+  
+    // When the red dot is no longer hovered over, hide the Enter button
+    redDot.addEventListener('mouseout', function() {
+      enterBtn.style.opacity = '0';
+      enterBtn.style.transform = 'scale(0)';
+      enterBtn.style.display = 'none';
+    });
+  
+    // When the Enter button is clicked, redirect to the main content page
+    enterBtn.addEventListener('click', function() {
+      window.location.href = 'main.html';
+    });
+  });
+  

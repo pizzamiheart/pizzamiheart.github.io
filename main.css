@@ -128,66 +128,65 @@ p {
   }
 }
 
-/* Fullscreen portal styles */
+/* Portal page styles */
 .portal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed; /* Fixed position to cover the entire screen */
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    overflow: hidden;
-    top: 0; /* Position at the top left of the viewport */
-    left: 0;
-    z-index: 10; /* High z-index to ensure it's above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
 
-/* Red dot styles */
 .red-dot {
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    /* Circular rotation around the center */
-    animation: rotateDot 2s linear infinite;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
+  animation: pulse 2s infinite alternate ease-in-out;
 }
 
-/* Enter button styles */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+}
+
 #enterBtn {
-    padding: 10px 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -20px) scale(0); /* Adjust translate to position correctly */
-    background-color: #333; /* A less bright color for the button */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    opacity: 0; /* Start as invisible */
-    z-index: 11; /* Above the red dot to ensure it's clickable */
+  padding: 10px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  z-index: 11;
+  display: none;
 }
 
-/* Hover effects for red dot and Enter button */
 .red-dot:hover + #enterBtn {
-    opacity: 1; /* Fade in the Enter button */
-    transform: translate(-50%, -20px) scale(1); /* Scale up the Enter button */
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
 }
 
-/* Rotate the red dot around a small circle */
-@keyframes rotateDot {
-    0% {
-        transform: translate(-50%, -50%) translate(10px, 0) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) translate(10px, 0) rotate(360deg);
-    }
-}
-
-.hidden {
-    display: none;
+.red-dot:hover {
+  opacity: 0;
 }

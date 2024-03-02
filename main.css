@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #e1e1e1;
   color: #000000;
@@ -84,6 +92,7 @@ li {
 .title {
   font-weight: 700;
   margin-bottom: 1em;
+  color: #fff; /* Make the title white */
 }
 
 button {
@@ -169,35 +178,30 @@ p {
 
 /* Enter button styles */
 #enterBtn {
-  padding: 10px 20px;
+  padding: 10px;
   position: absolute;
-  top: 50%;
+  top: 55%; /* Adjusted for better centering */
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
   background-color: transparent; /* Make the button transparent */
   color: #fff;
   border: 2px solid #fff; /* White border */
   border-radius: 5px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0; /* Start as invisible */
+  transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease;
+  opacity: 0;
   z-index: 11;
-  display: none; /* Start as not displayed */
+  display: none;
+  font-family: 'Press Start 2P', cursive; /* Set the font for the Enter button */
+  font-size: 16px; /* Adjust the font size as needed */
+  pointer-events: none;
+  width: auto; /* Adjust the width as needed */
 }
 
 /* Show the Enter button when red dot is hovered */
 .red-dot:hover + #enterBtn {
-  display: block; /* Show the button */
-  opacity: 1; /* Make the button fully visible */
-  transform: translate(-50%, -50%) scale(1); /* Scale up the button */
+  display: block;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: all;
 }
 
-/* Hide the red dot when hovered */
-.red-dot:hover {
-  opacity: 0;
-  animation: none;
-}
-
-/* Make the red dot non-interactive after hover */
-.red-dot:hover {
-  pointer-events: none;
-}

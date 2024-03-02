@@ -2,15 +2,23 @@ document.addEventListener('DOMContentLoaded', (event) => {
     var redDot = document.getElementById('redDot');
     var enterBtn = document.getElementById('enterBtn');
   
-    // When the red dot is hovered over, show the Enter button
+    // Show the Enter button when hovering over the red dot
     redDot.addEventListener('mouseover', function() {
       enterBtn.style.opacity = '1';
-      enterBtn.style.transform = 'translate(-50%, -50%) scale(1)';
+      enterBtn.style.transform = 'scale(1)';
       enterBtn.style.display = 'block';
-      redDot.style.display = 'none'; // Hide the red dot
+      enterBtn.style.pointerEvents = 'all';
     });
   
-    // When the Enter button is clicked, redirect to the main content page
+    // Hide the Enter button when the mouse moves away from the button
+    enterBtn.addEventListener('mouseleave', function() {
+      enterBtn.style.opacity = '0';
+      enterBtn.style.transform = 'scale(0)';
+      enterBtn.style.display = 'none';
+      redDot.style.display = 'block';
+    });
+  
+    // Redirect to the main content page when the Enter button is clicked
     enterBtn.addEventListener('click', function() {
       window.location.href = 'main.html';
     });

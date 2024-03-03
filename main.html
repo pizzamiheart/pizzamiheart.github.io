@@ -1,3 +1,5 @@
+
+Copy code
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
+    <style>
+        /* Additional styles to override system.css where necessary */
+        .window-pane {
+            display: none; /* Initially hide content panes */
+        }
+
+        .window .title-bar.active + .window-pane {
+            display: block; /* Show content pane when title bar is active */
+        }
+
+        /* Ensure the main content fits within the system window styling */
+        main, header, footer {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -26,7 +44,6 @@
 
         <p>Walt Whitman,<em> Song of Myself</em></p>
    
-        <hr class="vibrating-line">
 
         <h4 class="title">other places on the interwebs</h4>
         <ul class="contact-info no-bullets">
@@ -39,18 +56,22 @@
         </ul>
     </header>
 
-    <hr class="vibrating-line">
 
     <main>
-        <section>
-            <h2 class="title">Writing</h2>
-            <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
-            <!-- Container for blog posts -->
-            <div id="blog-posts"></div>
-        </section>
-    </main>
+        <div class="window">
+            <div class="title-bar"> 
+                <div class="title-bar-text">Writing</div>
+                <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
+            </div>
+            
+            <div class="window-pane">
+                <!-- Container for blog posts -->
+                <div id="blog-posts"></div>
+            </div>
+        </div>
+
+
     
-    <!-- Add your JavaScript at the end of the body -->
     <script>
         // JavaScript code to fetch and display blog posts
         const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
@@ -77,16 +98,17 @@
                 .catch(error => console.error('Error loading feed:', error));
         }
     
-        // Fetch and update the feed immediately when the page loads
-        fetchAndUpdateFeed();
+        function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            var isActive = section.previousElementSibling.classList.contains('active');
+            // Toggle active class on title bar and visibility of pane
+            section.previousElementSibling.classList.toggle('active', !isActive);
+            section.style.display = isActive ? 'none' : 'block';
+        }
     
-        // Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
+        fetchAndUpdateFeed();
         const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
         setInterval(fetchAndUpdateFeed, updateInterval);
-    </script>       
-    </main>
-    <footer>
-        <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
-    </footer>
+    </script>
 </body>
 </html>

@@ -4,137 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Ginn, etc.</title>
-    <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
-    <style>
-        .flex-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px; /* Adjust based on your preference */
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .window {
-            flex-basis: calc(33% - 20px); /* Adjust the width of each block */
-            max-width: 30rem; /* Adjust maximum width */
-        }
-
-        /* Optionally, hide the window-pane initially and show on title-bar click */
-        .window-pane {
-            display: none;
-        }
-
-        /* Adjust this for responsive behavior */
-        @media (max-width: 768px) {
-            .window {
-                flex-basis: 100%;
-            }
-        }
-    </style>
-    <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.title-bar').forEach((titleBar) => {
-          titleBar.addEventListener('click', () => {
-            const windowPane = titleBar.nextElementSibling;
-            windowPane.classList.toggle('hidden'); // Toggles visibility
-          });
-        });
-      });
-    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <div class="flex-container">
-        <!-- Each window becomes a flex item -->
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Andrew Ginn, etc.</div>
-            </div>
-            <div class="window-pane">
-                <!-- Content here -->
-            </div>
-        </div>
+    <header>
+        <h1 class="title">Andrew Ginn, etc.</h1>
+        <nav>
+            <ul class="no-bullets">
+                <li><a href="now.html" class="mute">Now</a></li>
+                <li><a href="about.html" class="mute">About</a></li>
+            </ul>
+        </nav>
 
-        <!-- Repeat for other sections -->
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Writing</div>
-            </div>
-            <div class="window-pane hidden">
-                <p>My thoughts on thinking, wondering, playing, parenting, love, technology...</p>
-            </div>
-        </div>
+        <h3 class="title">
+            "I celebrate myself, and sing myself,
+            And what I assume, you shall assume,
+            For every atom belonging to me as good belongs to you."
+        </h3>
 
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Now</div>
-            </div>
-            <div class="window-pane hidden">
-                <p>What I'm doing, interested in, working on, etc. My record of that stuff. </p>
-            </div>
-        </div>
-        
-        <!-- For the "About" section -->
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">About</div>
-            </div>
-            <div class="window-pane hidden">
-                <p>The memetic version of me.</p>
-            </div>
-        </div>
-        
-        <!-- For the "Contact" section -->
-        <div class="window">
-            <div class="title-bar">
-                <div class="title-bar-text">Other Places on the Interwebs</div>
-            </div>
-            <div class="window-pane hidden">
-                <ul class="contact-info no-bullets">
-                    <li>twitter: <a href="https://twitter.com/pizzamiheart" target="_blank">pizzamiheart</a></li>
-                    <li>email: <a href="mailto:a.g@andrewginn.fun">a.g@andrewginn.fun</a></li>
-                    <!-- Link to your posts page or RSS feed -->
-                    <li><a href="https://deep-loafe.beehiiv.com/" target="_blank">blog</a></li>
-                    <li><a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank">linkedin</a></li>
-                </ul>
-                </p>
-            </div>
-        </div>
-        <script>
-            // JavaScript code to fetch and display blog posts
-            const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
-            const blogContainer = document.getElementById('blog-posts');
-        
-            function fetchAndUpdateFeed() {
-                fetch(feedUrl)
-                    .then(response => response.json())
-                    .then(data => {
-                        const posts = data.items; // The actual path may vary depending on the feed structure
-                        let htmlContent = '';
-        
-                        posts.forEach(post => {
-                            htmlContent += `
-                                <article>
-                                    <h4><a href="${post.link}">${post.title}</a></h4>
-                                    <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
-                                </article>
-                            `;
-                        });
-        
-                        blogContainer.innerHTML = htmlContent;
-                    })
-                    .catch(error => console.error('Error loading feed:', error));
-            }
-        
-            // Fetch and update the feed immediately when the page loads
-            fetchAndUpdateFeed();
-        
-            // Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
-            const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
-            setInterval(fetchAndUpdateFeed, updateInterval);
-        </script>       
-</main>
-<footer>
-    <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
-</footer>
+        <p>Walt Whitman,<em> Song of Myself</em></p>
+   
+        <hr class="vibrating-line">
+
+        <h4 class="title">other places on the interwebs</h4>
+        <ul class="contact-info no-bullets">
+            <li>twitter: <a href="https://twitter.com/pizzamiheart" target="_blank">pizzamiheart</a></li>
+            <li>email: <a href="mailto:a.g@andrewginn.fun">a.g@andrewginn.fun</a></li>
+            <!-- Link to your posts page or RSS feed -->
+            <li><a href="https://deep-loafe.beehiiv.com/" target="_blank">blog</a></li>
+            <li><a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank">linkedin</a></li>
+        </ul>
+    </header>
+
+    <hr class="vibrating-line">
+
+    <main>
+        <section>
+            <h2 class="title">Writing</h2>
+            <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
+            <!-- Container for blog posts -->
+            <div id="blog-posts"></div>
+        </section>
+    </main>
+    
+    <!-- Add your JavaScript at the end of the body -->
+    <script>
+        // JavaScript code to fetch and display blog posts
+        const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
+        const blogContainer = document.getElementById('blog-posts');
+    
+        function fetchAndUpdateFeed() {
+            fetch(feedUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const posts = data.items; // The actual path may vary depending on the feed structure
+                    let htmlContent = '';
+    
+                    posts.forEach(post => {
+                        htmlContent += `
+                            <article>
+                                <h4><a href="${post.link}">${post.title}</a></h4>
+                                <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
+                            </article>
+                        `;
+                    });
+    
+                    blogContainer.innerHTML = htmlContent;
+                })
+                .catch(error => console.error('Error loading feed:', error));
+        }
+    
+        // Fetch and update the feed immediately when the page loads
+        fetchAndUpdateFeed();
+    
+        // Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
+        const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
+        setInterval(fetchAndUpdateFeed, updateInterval);
+    </script>       
+    </main>
+    <footer>
+        <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
+    </footer>
 </body>
 </html>

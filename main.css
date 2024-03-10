@@ -91,12 +91,17 @@ li {
   font-weight: 100;
 }
 
-/* Unique title styling for the welcome message */
-#unique-title {
+/* Unique title styling for the welcome message on the red dot page */
+.portal .title {
   font-family: 'Bungee Spice', cursive;
   color: #fff;
   text-align: center;
   font-size: 2rem;
+  position: absolute;
+  width: 100%;
+  top: 10%; /* Adjust the position as needed */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 button {
@@ -184,21 +189,21 @@ p {
 #enterBtn {
   padding: 10px;
   position: absolute;
-  top: 55%;
+  top: 55%; /* Adjusted for better centering */
   left: 50%;
   transform: translate(-50%, -50%) scale(0);
-  background-color: transparent;
+  background-color: transparent; /* Make the button transparent */
   color: #fff;
-  border: 2px solid #fff;
+  border: 2px solid #fff; /* White border */
   border-radius: 5px;
   transition: opacity 0.3s ease, transform 0.3s ease, display 0.3s ease;
   opacity: 0;
   z-index: 11;
   display: none;
-  font-family: 'Press Start 2P', cursive;
-  font-size: 16px;
+  font-family: 'Press Start 2P', cursive; /* Set the font for the Enter button */
+  font-size: 16px; /* Adjust the font size as needed */
   pointer-events: none;
-  width: auto;
+  width: auto; /* Adjust the width as needed */
 }
 
 /* Show the Enter button when red dot is hovered */

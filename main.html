@@ -24,7 +24,7 @@
             For every atom belonging to me as good belongs to you."
         </h3>
 
-        <p>Walt Whitman,<em> Song of Myself</em></p>
+        <p>Walt Whitman, <em>Song of Myself</em></p>
    
         <hr class="vibrating-line">
 
@@ -32,7 +32,6 @@
         <ul class="contact-info no-bullets">
             <li>twitter: <a href="https://twitter.com/pizzamiheart" target="_blank">pizzamiheart</a></li>
             <li>email: <a href="mailto:a.g@andrewginn.fun">a.g@andrewginn.fun</a></li>
-            <!-- Link to your posts page or RSS feed -->
             <li><a href="https://deep-loafe.beehiiv.com/" target="_blank">blog</a></li>
             <li><a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank">linkedin</a></li>
         </ul>
@@ -44,12 +43,14 @@
         <section>
             <h2 class="title">Writing</h2>
             <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
-            <!-- Container for blog posts -->
             <div id="blog-posts"></div>
         </section>
     </main>
-    
-    <!-- Add your JavaScript at the end of the body -->
+
+    <footer>
+        <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
+    </footer>
+
     <script>
         // JavaScript code to fetch and display blog posts
         const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
@@ -59,9 +60,8 @@
             fetch(feedUrl)
                 .then(response => response.json())
                 .then(data => {
-                    const posts = data.items; // The actual path may vary depending on the feed structure
+                    const posts = data.items;
                     let htmlContent = '';
-    
                     posts.forEach(post => {
                         htmlContent += `
                             <article>
@@ -70,22 +70,13 @@
                             </article>
                         `;
                     });
-    
                     blogContainer.innerHTML = htmlContent;
                 })
                 .catch(error => console.error('Error loading feed:', error));
         }
-    
-        // Fetch and update the feed immediately when the page loads
+
         fetchAndUpdateFeed();
-    
-        // Set an interval to refresh the feed every 15 minutes (adjust the interval as needed)
-        const updateInterval = 15 * 60 * 1000; // 15 minutes in milliseconds
-        setInterval(fetchAndUpdateFeed, updateInterval);
-    </script>       
-    </main>
-    <footer>
-        <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
-    </footer>
+        setInterval(fetchAndUpdateFeed, 15 * 60 * 1000);
+    </script>
 </body>
 </html>

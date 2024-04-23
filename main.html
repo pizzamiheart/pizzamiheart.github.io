@@ -32,51 +32,13 @@
         <ul class="contact-info no-bullets">
             <li>twitter: <a href="https://twitter.com/pizzamiheart" target="_blank">pizzamiheart</a></li>
             <li>email: <a href="mailto:a.g@andrewginn.fun">a.g@andrewginn.fun</a></li>
-            <li><a href="https://deep-loafe.beehiiv.com/" target="_blank">blog</a></li>
+            <li><a href="www.blog.andrewginn.fun" target="_blank">blog</a></li>
             <li><a href="https://www.linkedin.com/in/andrew-c-ginn/" target="_blank">linkedin</a></li>
         </ul>
     </header>
 
     <hr class="vibrating-line">
 
-    <main>
-        <section>
-            <h2 class="title">Writing</h2>
-            <p>My thoughts on thinking, wondering, playing, parenting, love, technology - the collective pursuit of having a philosophy of my life.</p>
-            <div id="blog-posts"></div>
-        </section>
-    </main>
-
     <footer>
         <p>&copy; 2024 Andrew Ginn, etc. All rights reserved.</p>
     </footer>
-
-    <script>
-        // JavaScript code to fetch and display blog posts
-        const feedUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https://rss.beehiiv.com/feeds/nAJI3BJYKP.xml';
-        const blogContainer = document.getElementById('blog-posts');
-    
-        function fetchAndUpdateFeed() {
-            fetch(feedUrl)
-                .then(response => response.json())
-                .then(data => {
-                    const posts = data.items;
-                    let htmlContent = '';
-                    posts.forEach(post => {
-                        htmlContent += `
-                            <article>
-                                <h4><a href="${post.link}">${post.title}</a></h4>
-                                <p>Published on: ${new Date(post.pubDate).toLocaleDateString()}</p>
-                            </article>
-                        `;
-                    });
-                    blogContainer.innerHTML = htmlContent;
-                })
-                .catch(error => console.error('Error loading feed:', error));
-        }
-
-        fetchAndUpdateFeed();
-        setInterval(fetchAndUpdateFeed, 15 * 60 * 1000);
-    </script>
-</body>
-</html>

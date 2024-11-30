@@ -127,9 +127,11 @@ iframe {
 }
 
 footer {
-  margin-top: 2em;
-  padding: 1em 0;
+  margin-top: 2rem;
+  padding: 1rem 0;
   text-align: center;
+  border-top: 1px solid #ddd;
+  color: #666;
 }
 
 p {
